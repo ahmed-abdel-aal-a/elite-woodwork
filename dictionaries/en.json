@@ -1,0 +1,286 @@
+{
+  "nav": {
+    "brand_subtitle": "Architectural Wood Engineering",
+    "about": "About",
+    "scope": "Scope of Works",
+    "portfolio": "Milestone Portfolio",
+    "quality": "Quality & Warranty",
+    "clients": "Clients",
+    "contact": "Contact Us",
+    "cta": "Get In Touch"
+  },
+  "hero": {
+    "slides": [
+      {
+        "tag": "Milestone 01 • IMF Regional Headquarters",
+        "title": "SHAPING SOVEREIGN LANDMARKS",
+        "titleGradient": "MASTERPIECE JOINERY",
+        "subtitle": "Bespoke curved Italian marble and walnut woodwork crafted for international diplomatic standards in Riyadh."
+      },
+      {
+        "tag": "Acoustic Mastery • Diplomatic Auditorium",
+        "title": "PARAMETRIC 3D ACOUSTIC",
+        "titleGradient": "WAVE ENGINEERING",
+        "subtitle": "High-performance acoustic wood panels and parametric ceilings seamlessly integrated for global summits."
+      },
+      {
+        "tag": "Presidential Millwork • Boardroom Suites",
+        "title": "BUILT FOR VISIONARIES",
+        "titleGradient": "TIMELESS LEGACY",
+        "subtitle": "Natural bookmatched veneer claddings, hidden acoustic flush doors, and integrated smart conference infrastructure."
+      }
+    ],
+    "explore": "Explore Iconic Projects",
+    "story": "The ELITE Legacy",
+    "scroll": "Scroll To Discover"
+  },
+  "stats": {
+    "badge": "02 • Certified Numbers",
+    "title": "Numbers Defining Market Leadership",
+    "years": { "val": 15, "suf": " Years", "lbl": "Of Woodwork Engineering", "desc": "Manufacturing & supplying supreme joinery since 2011" },
+    "projects": { "val": 60, "suf": "+", "lbl": "Delivered Architectural Milestones", "desc": "Sovereign ministries, embassies, & financial towers" },
+    "pieces": { "val": 500, "suf": "+", "lbl": "Custom Millwork Creations", "desc": "Precision pieces crafted for premier executive suites" },
+    "clients": { "val": 100, "suf": "+", "lbl": "Institutional Partners", "desc": "Trusted partnerships with sovereign funds & ministries" }
+  },
+  "about": {
+    "badge": "01 • About Us",
+    "heading": "SAUDI CRAFTSMANSHIP",
+    "headingGold": "GLOBAL DISTINCTION",
+    "p1": "Headquartered in Riyadh, ELITE has evolved into the most trusted name in bespoke architectural woodwork, luxury fit-outs, and handcrafted contract furniture. As a purely Saudi enterprise, we combine ancestral carpentry mastery with European CNC precision engineering.",
+    "p2": "With over 15 years of industry leadership, we translate the world's most intricate architectural blueprints into tactile reality. Our approach is deeply committed to sustainable forestry, certified timber chains, and green manufacturing inside the Kingdom.",
+    "feat1": "Sustainable Certified Forestry",
+    "feat1_desc": "Strictly certified and ethically sourced woods ensuring environmental integrity.",
+    "feat2": "SBC & Civil Defense Compliance",
+    "feat2_desc": "Full compliance with Saudi Building Code (SBC) and stringent fire-rating standards.",
+    "card1_stat": "100%",
+    "card1_lbl": "Saudi Design & Engineering Precision",
+    "card2_stat": "2026",
+    "card2_lbl": "Pioneering the Architectural Future"
+  },
+  "values": {
+    "badge": "03 • Core Philosophy",
+    "title": "Vision, Mission & Core Values",
+    "v1_title": "Master Craftsmanship",
+    "v1_sub": "Pursuit of Perfection",
+    "v1_desc": "Every joint, bookmatched veneer grain, and hand-finished lacquer layer is executed with obsessive precision.",
+    "v2_title": "Sustainability & Care",
+    "v2_sub": "Responsible Sourcing",
+    "v2_desc": "Uncompromising adherence to certified supply chains and waste minimisation across all production lines.",
+    "v3_title": "Engineering Innovation",
+    "v3_sub": "Modern Technology",
+    "v3_desc": "Seamless fusion of advanced acoustic baffling, parametric geometry, and hidden structural engineering.",
+    "v4_title": "Executive Focus",
+    "v4_sub": "Long-Term Partnerships",
+    "v4_desc": "Strict adherence to delivery schedules, snag-free handovers, and dedicated long-term technical support."
+  },
+  "scope": {
+    "badge": "04 • Engineering Disciplines",
+    "title": "Comprehensive Scope of Works",
+    "desc": "End-to-end architectural wood engineering and bespoke joinery crafted for institutional projects.",
+    "standards": "Key Technical Specifications:",
+    "spec_sheet": "Technical Specification Sheet",
+    "items": [
+      {
+        "id": "doors",
+        "number": "01",
+        "title": "Certified Doors & Architectural Frames",
+        "short": "Fire-rated, acoustic, and concealed pivot assemblies",
+        "desc": "Engineered flush doorsets with acoustic drop seals, concealed 3D adjustable hinges, access control integrations, and up to 120-minute fire ratings conforming to Saudi Building Code (SBC).",
+        "specs": ["FD30 / FD60 / FD120 Certified Fire Integrity", "Superior acoustic reduction up to 48dB Rw", "Heavy-duty concealed architectural pivot hinges"]
+      },
+      {
+        "id": "cladding",
+        "number": "02",
+        "title": "Engineered Wall Cladding & Paneling",
+        "short": "Bookmatched natural veneers and hardwood slats",
+        "desc": "Precision architectural wall cladding systems engineered with acoustic absorption backing, bookmatched natural veneers, and integrated architectural shadow gaps for boardrooms and VIP suites.",
+        "specs": ["Premium bookmatched natural veneer curation", "Micro-perforated acoustic sound absorption", "Class A fire-retardant treated substrates"]
+      },
+      {
+        "id": "ceilings",
+        "number": "03",
+        "title": "Parametric 3D Feature Ceilings",
+        "short": "Acoustic timber baffles and grilles",
+        "desc": "Curved and linear architectural ceilings sculptured with integrated LED lighting channels, hidden AC linear diffusers, and tuned reverberation control for diplomatic halls and auditoriums.",
+        "specs": ["Parametric wave baffles for echo mitigation", "Integrated MEP and lighting channel profiles", "Deflection-free seismic certified steel sub-frames"]
+      },
+      {
+        "id": "millwork",
+        "number": "04",
+        "title": "Executive Millwork & Cabinetry",
+        "short": "Custom executive suites and boardroom tables",
+        "desc": "Bespoke executive boardroom tables, presidential desks, and library joinery constructed with German mechanical hardware and anti-fingerprint finishes.",
+        "specs": ["Heavy-duty German soft-close running gear", "Integrated wireless charging & cable raceways", "Velvet-touch scratch-resistant polyurethane finish"]
+      },
+      {
+        "id": "reception",
+        "number": "05",
+        "title": "Curved Counters & Portals",
+        "short": "Italian marble and backlit fluted timber",
+        "desc": "Monumental reception counters pairing curved Italian marble with fluted solid hardwoods and hidden halo LED illumination, engineered to establish an imposing first impression.",
+        "specs": ["Seamless marble-to-wood engineered transitions", "Concealed ambient LED diffusers", "Hidden secure raceways for security systems"]
+      }
+    ]
+  },
+  "portfolio": {
+    "badge": "06 • Milestone Portfolio",
+    "title": "Our 8 Landmark Projects",
+    "all": "All Projects",
+    "sovereign": "Sovereign & Diplomatic",
+    "corporate": "Corporate Headquarters",
+    "governmental": "Governmental & Ministries",
+    "grain_lens": "Grain Lens",
+    "fullscreen": "Fullscreen View",
+    "gallery_counter": "Photo {current} of {total}",
+    "next_photo": "Next Photograph",
+    "prev_photo": "Previous Photograph",
+    "next_project": "Next Landmark",
+    "prev_project": "Previous Landmark",
+    "auto_loop_active": "Auto-Rotating Showcase",
+    "paused_for_inspection": "Paused for Inspection",
+    "imf_halls": {
+      "reception": "Main Reception & Lobby",
+      "auditorium": "Main Conference Auditorium",
+      "boardroom": "Executive Boardroom",
+      "pantry": "Executive Lounge & Pantry"
+    },
+    "projects": [
+      {
+        "id": "imf",
+        "number": "01",
+        "category": "sovereign",
+        "title": "IMF Regional Offices",
+        "entity": "International Monetary Fund (Riyadh)",
+        "room": "Reception, Auditorium & Boardroom",
+        "desc": "ELITE executed the custom curved marble woodwork, 3D acoustic wave ceilings, and luxury veneer joinery for the IMF Headquarters in Riyadh."
+      },
+      {
+        "id": "avilease",
+        "number": "02",
+        "category": "corporate",
+        "title": "Avilease Offices",
+        "entity": "Aviation Financing Leader",
+        "room": "Executive Reception & Boardroom",
+        "desc": "Executed custom woodwork across Avilease offices, creating a seamless, functional, and refined environment."
+      },
+      {
+        "id": "boston",
+        "number": "03",
+        "category": "corporate",
+        "title": "Boston Scientific Offices",
+        "entity": "Medical Technology Giant",
+        "room": "Entrance & Meeting Suites",
+        "desc": "Precise millwork and joinery implementations across facilities, translating medical design intent into refined interiors."
+      },
+      {
+        "id": "cntxt",
+        "number": "04",
+        "category": "corporate",
+        "title": "CNTXT Offices",
+        "entity": "Digital Transformation Hub",
+        "room": "Collaborative Main Areas",
+        "desc": "Translating CNTXT digital brand into a tactile workspace where high technology meets natural wood warmth."
+      },
+      {
+        "id": "cbre",
+        "number": "05",
+        "category": "corporate",
+        "title": "CBRE Offices",
+        "entity": "Global Real Estate Services",
+        "room": "Entrance Lobby & Workspaces",
+        "desc": "Refined woodwork and interior finishes across reception areas, corridors, and executive meeting rooms."
+      },
+      {
+        "id": "hstp",
+        "number": "06",
+        "category": "governmental",
+        "title": "HSTP Offices",
+        "entity": "Health Sector Transformation Program (MOH)",
+        "room": "Work Area & Executive Portals",
+        "desc": "Custom woodwork aligning with public sector dignity, privacy standards, and refined professionalism."
+      },
+      {
+        "id": "kafd",
+        "number": "07",
+        "category": "sovereign",
+        "title": "KAFD 2.14 Offices",
+        "entity": "King Abdullah Financial District",
+        "room": "Main Offices & Joinery",
+        "desc": "Tailored joinery and architectural details highlighting both function and financial district elegance."
+      },
+      {
+        "id": "nssc",
+        "number": "08",
+        "category": "governmental",
+        "title": "NSSC Offices (SAFE)",
+        "entity": "National Security Services Company",
+        "room": "Main Operations & Reception",
+        "desc": "Precision woodwork and interior detailing across reception zones, meeting areas, and command suites."
+      }
+    ]
+  },
+  "quality": {
+    "badge": "05 • Quality & Timeline",
+    "title": "Engineering Rigor & Commitments",
+    "c1_badge": "Code Compliance",
+    "c1_title": "Saudi Building Code (SBC)",
+    "c1_desc": "Full engineering alignment with SBC standards. Certified fire-rated specifications, acoustic submittals, and close-out manuals.",
+    "c2_badge": "Fast-Track Handover",
+    "c2_title": "60-Day Delivery Programme (2 Months)",
+    "c2_desc": "Consistent precision finishes across zones within an intensive 60-day schedule—delivering a completely snag-free handover.",
+    "c3_badge": "Full Peace of Mind",
+    "c3_title": "365-Day Warranty (1 Full Year)",
+    "c3_desc": "Backed by our comprehensive 365-day warranty with a dedicated Riyadh-based technical support team providing on-site maintenance.",
+    "guaranteed": "Guaranteed by ELITE Official Contract"
+  },
+  "clients": {
+    "badge": "07 • Trusted Partnerships",
+    "title": "Our Prestigious Clients",
+    "desc": "From global international institutions to the Kingdom’s sovereign leaders and visionary entities."
+  },
+  "contact": {
+    "badge": "08 • Contact Us",
+    "title": "Crafting Iconic Spaces Across The Kingdom",
+    "address_card": "Official National Address",
+    "bld": "Building No.",
+    "street": "Street",
+    "street_val": "King Fahad Branch Road",
+    "dist": "District",
+    "dist_val": "Ar Rahmaniyah Dist.",
+    "sec": "Secondary No.",
+    "zip": "Postal Code",
+    "city": "City / Country",
+    "city_val": "Riyadh, Kingdom of Saudi Arabia",
+    "spl_title": "Official SPL Verification",
+    "spl_desc": "Scan QR code to verify official registration details on the Saudi Post (SPL) portal.",
+    "form_title": "Request an Architectural Consultation",
+    "form_desc": "Direct executive pipeline connected to ELITE engineering department in Riyadh.",
+    "name": "Full Name *",
+    "entity": "Organization / Entity *",
+    "email": "Corporate Email *",
+    "phone": "Saudi Mobile Number *",
+    "phone_placeholder": "05xxxxxxxx or +9665xxxxxxxx",
+    "err_phone": "Please enter a valid Saudi mobile number (e.g., 05xxxxxxxx or +9665xxxxxxxx)",
+    "scope_lbl": "Project Scope *",
+    "scopes": {
+      "hq": "Corporate Headquarter Fit-Out",
+      "ceilings": "Parametric 3D Feature Ceilings",
+      "doors": "SBC Certified Doorsets & Wall Cladding",
+      "residential": "Bespoke Luxury Residential",
+      "other": "Other Architectural Millwork"
+    },
+    "brief": "Project Brief & Requirements",
+    "btn_loading": "Encrypting & Dispatching RFP...",
+    "btn_submit": "Submit Executive RFP",
+    "success_title": "RFP Dispatched Successfully",
+    "success_desc": "Logged in our corporate register. An executive director will connect with you within 24 hours.",
+    "fallback_notice": "Executive RFP Brief Encrypted & Ready",
+    "btn_whatsapp": "Direct WhatsApp Dispatch",
+    "btn_reset": "Edit RFP Brief"
+  },
+  "footer": {
+    "slogan": "Proudly Saudi, Turning Visions into Living Realities",
+    "rights": "© 2026 ELITE Wood Engineering Company. All rights reserved. Riyadh, KSA.",
+    "registered": "SAUDI ARABIA • NATIONAL ADDRESS REGISTERED"
+  }
+}
