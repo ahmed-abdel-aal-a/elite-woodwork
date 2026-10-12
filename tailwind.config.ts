@@ -9,24 +9,35 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        obsidian: '#0B0E13',
+        obsidian: '#131210',
+        walnut: {
+          DEFAULT: '#4A3729',
+          dark: '#38291E',
+          light: '#5E4634',
+        },
         charcoal: {
-          DEFAULT: '#10141A',
-          light: '#181E27',
-          border: '#222B38',
+          DEFAULT: '#191715',
+          light: '#23201D',
+          border: '#332D28',
         },
         caramel: {
-          light: '#B27D56',
-          DEFAULT: '#8F5D38',
-          dark: '#704830',
+          light: '#A67746',
+          DEFAULT: '#92683E',
+          dark: '#7A542F',
+          brand: '#96673B',
+        },
+        sand: {
+          DEFAULT: '#CFB898',
+          light: '#DFCCA9',
+          dark: '#BFA887',
         },
         gold: {
-          light: '#F3E5AB',
-          DEFAULT: '#D4AF37',
-          dark: '#997D25',
+          light: '#DFCCA9',
+          DEFAULT: '#92683E',
+          dark: '#7A542F',
         },
         cream: {
-          DEFAULT: '#F5ECE1',
+          DEFAULT: '#F2E7D5',
           muted: '#DCD4C9',
         },
         stone: {
@@ -40,8 +51,9 @@ const config: Config = {
         arabic: ['var(--font-arabic)', 'sans-serif'],
       },
       backgroundImage: {
-        'luxury-gradient': 'radial-gradient(ellipse at top, rgba(143, 93, 56, 0.15) 0%, rgba(11, 14, 19, 0.95) 75%)',
-        'gold-shimmer': 'linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.25), transparent)',
+        'luxury-gradient': 'radial-gradient(ellipse at top, rgba(146, 104, 62, 0.16) 0%, rgba(19, 18, 16, 0.98) 75%)',
+        'wood-shimmer': 'linear-gradient(90deg, transparent, rgba(207, 184, 152, 0.22), transparent)',
+        'gold-shimmer': 'linear-gradient(90deg, transparent, rgba(207, 184, 152, 0.22), transparent)',
       },
     },
   },

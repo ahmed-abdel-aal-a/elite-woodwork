@@ -50,10 +50,10 @@ export default function Preloader() {
           <div className="absolute inset-0 bg-luxury-gradient pointer-events-none" />
 
           <div className="relative z-10 flex flex-col items-center px-6">
-            {/* رسم الشعار المعماري الأصلي ≡ L I T ≡ بخطوط الليزر الذهبية */}
+            {/* رسم الشعار المعماري الأصلي ≡ L I T ≡ بخطوط الليزر الخشبية الدافئة */}
             <svg
               viewBox="0 0 524 160"
-              className="w-80 sm:w-[460px] h-auto drop-shadow-[0_10px_35px_rgba(212,175,55,0.4)]"
+              className="w-80 sm:w-[460px] h-auto drop-shadow-[0_10px_35px_rgba(146,104,62,0.4)]"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
@@ -64,12 +64,12 @@ export default function Preloader() {
                 width="80"
                 height="14"
                 rx="2"
-                stroke="#D4AF37"
+                stroke="#92683E"
                 strokeWidth="2"
-                initial={{ pathLength: 0, fill: 'rgba(212, 175, 55, 0)' }}
+                initial={{ pathLength: 0, fill: 'rgba(146, 104, 62, 0)' }}
                 animate={{
                   pathLength: 1,
-                  fill: progress > 70 ? 'rgba(212, 175, 55, 1)' : 'rgba(212, 175, 55, 0)',
+                  fill: progress > 70 ? 'rgba(146, 104, 62, 1)' : 'rgba(146, 104, 62, 0)',
                 }}
                 transition={{ duration: 0.8, ease: 'easeInOut' }}
               />
@@ -80,12 +80,12 @@ export default function Preloader() {
                 width="80"
                 height="14"
                 rx="2"
-                stroke="#D4AF37"
+                stroke="#92683E"
                 strokeWidth="2"
-                initial={{ pathLength: 0, fill: 'rgba(212, 175, 55, 0)' }}
+                initial={{ pathLength: 0, fill: 'rgba(146, 104, 62, 0)' }}
                 animate={{
                   pathLength: 1,
-                  fill: progress > 70 ? 'rgba(212, 175, 55, 1)' : 'rgba(212, 175, 55, 0)',
+                  fill: progress > 70 ? 'rgba(146, 104, 62, 1)' : 'rgba(146, 104, 62, 0)',
                 }}
                 transition={{ duration: 0.8, delay: 0.1, ease: 'easeInOut' }}
               />
@@ -96,12 +96,12 @@ export default function Preloader() {
                 width="80"
                 height="14"
                 rx="2"
-                stroke="#D4AF37"
+                stroke="#92683E"
                 strokeWidth="2"
-                initial={{ pathLength: 0, fill: 'rgba(212, 175, 55, 0)' }}
+                initial={{ pathLength: 0, fill: 'rgba(146, 104, 62, 0)' }}
                 animate={{
                   pathLength: 1,
-                  fill: progress > 70 ? 'rgba(212, 175, 55, 1)' : 'rgba(212, 175, 55, 0)',
+                  fill: progress > 70 ? 'rgba(146, 104, 62, 1)' : 'rgba(146, 104, 62, 0)',
                 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: 'easeInOut' }}
               />
@@ -109,13 +109,13 @@ export default function Preloader() {
               {/* الحرف L: القائم الرأسي والقاعدة */}
               <motion.path
                 d="M145 35 H159 V111 H215 V125 H145 Z"
-                stroke="#D4AF37"
+                stroke="#92683E"
                 strokeWidth="2"
                 strokeLinejoin="round"
-                initial={{ pathLength: 0, fill: 'rgba(212, 175, 55, 0)' }}
+                initial={{ pathLength: 0, fill: 'rgba(146, 104, 62, 0)' }}
                 animate={{
                   pathLength: 1,
-                  fill: progress > 75 ? 'rgba(212, 175, 55, 1)' : 'rgba(212, 175, 55, 0)',
+                  fill: progress > 75 ? 'rgba(146, 104, 62, 1)' : 'rgba(146, 104, 62, 0)',
                 }}
                 transition={{ duration: 0.9, delay: 0.2, ease: 'easeInOut' }}
               />
@@ -127,12 +127,12 @@ export default function Preloader() {
                 width="14"
                 height="90"
                 rx="2"
-                stroke="#D4AF37"
+                stroke="#92683E"
                 strokeWidth="2"
-                initial={{ pathLength: 0, fill: 'rgba(212, 175, 55, 0)' }}
+                initial={{ pathLength: 0, fill: 'rgba(146, 104, 62, 0)' }}
                 animate={{
                   pathLength: 1,
-                  fill: progress > 80 ? 'rgba(212, 175, 55, 1)' : 'rgba(212, 175, 55, 0)',
+                  fill: progress > 80 ? 'rgba(146, 104, 62, 1)' : 'rgba(146, 104, 62, 0)',
                 }}
                 transition={{ duration: 0.8, delay: 0.3, ease: 'easeInOut' }}
               />
@@ -140,13 +140,13 @@ export default function Preloader() {
               {/* الحرف T: الكمرة العلوية والعمود الرأسي */}
               <motion.path
                 d="M299 35 H379 V49 H346 V125 H332 V49 H299 Z"
-                stroke="#D4AF37"
+                stroke="#92683E"
                 strokeWidth="2"
                 strokeLinejoin="round"
-                initial={{ pathLength: 0, fill: 'rgba(212, 175, 55, 0)' }}
+                initial={{ pathLength: 0, fill: 'rgba(146, 104, 62, 0)' }}
                 animate={{
                   pathLength: 1,
-                  fill: progress > 85 ? 'rgba(212, 175, 55, 1)' : 'rgba(212, 175, 55, 0)',
+                  fill: progress > 85 ? 'rgba(146, 104, 62, 1)' : 'rgba(146, 104, 62, 0)',
                 }}
                 transition={{ duration: 0.9, delay: 0.35, ease: 'easeInOut' }}
               />
@@ -158,12 +158,12 @@ export default function Preloader() {
                 width="80"
                 height="14"
                 rx="2"
-                stroke="#D4AF37"
+                stroke="#92683E"
                 strokeWidth="2"
-                initial={{ pathLength: 0, fill: 'rgba(212, 175, 55, 0)' }}
+                initial={{ pathLength: 0, fill: 'rgba(146, 104, 62, 0)' }}
                 animate={{
                   pathLength: 1,
-                  fill: progress > 90 ? 'rgba(212, 175, 55, 1)' : 'rgba(212, 175, 55, 0)',
+                  fill: progress > 90 ? 'rgba(146, 104, 62, 1)' : 'rgba(146, 104, 62, 0)',
                 }}
                 transition={{ duration: 0.8, delay: 0.4, ease: 'easeInOut' }}
               />
@@ -174,12 +174,12 @@ export default function Preloader() {
                 width="80"
                 height="14"
                 rx="2"
-                stroke="#D4AF37"
+                stroke="#92683E"
                 strokeWidth="2"
-                initial={{ pathLength: 0, fill: 'rgba(212, 175, 55, 0)' }}
+                initial={{ pathLength: 0, fill: 'rgba(146, 104, 62, 0)' }}
                 animate={{
                   pathLength: 1,
-                  fill: progress > 90 ? 'rgba(212, 175, 55, 1)' : 'rgba(212, 175, 55, 0)',
+                  fill: progress > 90 ? 'rgba(146, 104, 62, 1)' : 'rgba(146, 104, 62, 0)',
                 }}
                 transition={{ duration: 0.8, delay: 0.45, ease: 'easeInOut' }}
               />
@@ -190,12 +190,12 @@ export default function Preloader() {
                 width="80"
                 height="14"
                 rx="2"
-                stroke="#D4AF37"
+                stroke="#92683E"
                 strokeWidth="2"
-                initial={{ pathLength: 0, fill: 'rgba(212, 175, 55, 0)' }}
+                initial={{ pathLength: 0, fill: 'rgba(146, 104, 62, 0)' }}
                 animate={{
                   pathLength: 1,
-                  fill: progress > 90 ? 'rgba(212, 175, 55, 1)' : 'rgba(212, 175, 55, 0)',
+                  fill: progress > 90 ? 'rgba(146, 104, 62, 1)' : 'rgba(146, 104, 62, 0)',
                 }}
                 transition={{ duration: 0.8, delay: 0.5, ease: 'easeInOut' }}
               />
@@ -213,13 +213,13 @@ export default function Preloader() {
             <div className="mt-8 flex flex-col items-center w-56 sm:w-64">
               <div className="w-full h-[2px] bg-charcoal-border rounded-full overflow-hidden">
                 <div
-                  className="h-full bg-gradient-to-r from-caramel via-gold to-cream transition-all duration-100 ease-out shadow-[0_0_10px_rgba(212,175,55,0.7)]"
+                  className="h-full bg-gradient-to-r from-walnut via-caramel to-sand transition-all duration-100 ease-out shadow-[0_0_10px_rgba(146,104,62,0.7)]"
                   style={{ width: `${progress}%` }}
                 />
               </div>
               <div className="mt-3 flex justify-between w-full text-[11px] font-mono text-stone-slate">
                 <span>RIYADH • 2026</span>
-                <span className="text-gold font-semibold">{progress}%</span>
+                <span className="text-caramel font-semibold">{progress}%</span>
               </div>
             </div>
           </div>

@@ -132,9 +132,9 @@ export default function HeroSection() {
                 opacity: { duration: 0.6, ease: 'easeOut' },
                 filter: { duration: 0.5, ease: 'easeOut' },
               }}
-              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-obsidian/60 border border-gold/40 backdrop-blur-md mb-6 shadow-lg"
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-obsidian/60 border border-caramel/40 backdrop-blur-md mb-6 shadow-lg"
             >
-              <Sparkles className="w-3.5 h-3.5 text-gold" />
+              <Sparkles className="w-3.5 h-3.5 text-caramel" />
               <span className="text-[11px] uppercase tracking-[0.25em] text-cream font-semibold">
                 {activeSlide.tag}
               </span>
@@ -192,13 +192,13 @@ export default function HeroSection() {
             >
               <a
                 href="#portfolio"
-                className="px-8 py-4 bg-gradient-to-r from-caramel to-caramel-dark text-cream text-xs uppercase tracking-[0.25em] font-bold border border-gold/40 hover:border-gold hover:shadow-[0_0_30px_rgba(212,175,55,0.4)] transition-all shadow-xl"
+                className="px-8 py-4 bg-gradient-to-r from-caramel to-caramel-dark text-cream text-xs uppercase tracking-[0.25em] font-bold border border-sand/40 hover:border-sand hover:shadow-[0_0_30px_rgba(146,104,62,0.45)] transition-all shadow-xl"
               >
                 {t.hero.explore}
               </a>
               <a
                 href="#about"
-                className="px-8 py-4 bg-obsidian/70 backdrop-blur-md text-stone-sand hover:text-cream text-xs uppercase tracking-[0.25em] font-semibold border border-white/15 hover:border-gold/50 transition-all shadow-xl"
+                className="px-8 py-4 bg-obsidian/70 backdrop-blur-md text-stone-sand hover:text-cream text-xs uppercase tracking-[0.25em] font-semibold border border-white/15 hover:border-caramel/60 transition-all shadow-xl"
               >
                 {t.hero.story}
               </a>
@@ -215,7 +215,7 @@ export default function HeroSection() {
               key={index}
               onClick={() => handleManualSlide(index)}
               className={`h-1.5 transition-all duration-500 rounded-full ${
-                currentSlide === index ? 'w-10 bg-gold shadow-[0_0_12px_rgba(212,175,55,0.9)]' : 'w-3 bg-white/30 hover:bg-white/60'
+                currentSlide === index ? 'w-10 bg-caramel shadow-[0_0_12px_rgba(146,104,62,0.85)]' : 'w-3 bg-white/30 hover:bg-white/60'
               }`}
               aria-label={`Go to slide ${index + 1}`}
             />
@@ -224,10 +224,10 @@ export default function HeroSection() {
 
         <a
           href="#stats"
-          className="hidden md:flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-stone-sand hover:text-gold transition-colors drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]"
+          className="hidden md:flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-stone-sand hover:text-sand transition-colors drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]"
         >
           <span>{t.hero.scroll}</span>
-          <ArrowDown className="w-4 h-4 animate-bounce text-gold" />
+          <ArrowDown className="w-4 h-4 animate-bounce text-caramel" />
         </a>
       </div>
     </section>

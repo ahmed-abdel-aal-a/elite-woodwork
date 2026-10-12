@@ -6,11 +6,11 @@
   html {
     scrollbar-gutter: stable;
     scroll-behavior: smooth;
-    background-color: #0B0E13;
-    color: #E6E4DE;
+    background-color: #131210;
+    color: #F2E7D5;
   }
 
-  /* الشريط الزجاجي المعماري الفاخر (Custom Obsidian & Champagne Gold Scrollbar) */
+  /* الشريط الزجاجي المعماري الفاخر (Custom Obsidian & Architectural Wood Scrollbar) */
   ::-webkit-scrollbar {
     width: 7px;
     height: 7px;
@@ -21,16 +21,16 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: rgba(212, 175, 55, 0.28);
+    background: rgba(146, 104, 62, 0.35);
     border-radius: 9999px;
-    border: 1px solid rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(207, 184, 152, 0.2);
     background-clip: padding-box;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: rgba(212, 175, 55, 0.65);
-    box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+    background: rgba(146, 104, 62, 0.7);
+    box-shadow: 0 0 10px rgba(207, 184, 152, 0.35);
   }
 
   ::-webkit-scrollbar-corner {
@@ -46,19 +46,21 @@
   /* توافقية المتصفحات الحديثة (Firefox) */
   * {
     scrollbar-width: thin;
-    scrollbar-color: rgba(212, 175, 55, 0.32) transparent;
+    scrollbar-color: rgba(146, 104, 62, 0.35) transparent;
   }
 }
 
 @layer utilities {
-  .text-gradient-gold {
-    background: linear-gradient(135deg, #F3E5AB 0%, #D4AF37 45%, #8F5D38 100%);
+  .text-gradient-gold,
+  .text-gradient-wood {
+    background: linear-gradient(135deg, #F2E7D5 0%, #CFB898 40%, #92683E 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   
-  .gold-border-glow {
-    box-shadow: 0 0 25px rgba(212, 175, 55, 0.18);
+  .gold-border-glow,
+  .wood-border-glow {
+    box-shadow: 0 0 25px rgba(146, 104, 62, 0.22);
   }
 
   .perspective-1000 {

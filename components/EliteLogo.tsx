@@ -27,8 +27,8 @@ export default function EliteLogo({
       {/* 
         الشعار المعماري السيادي النقي ≡ L I T ≡:
         - ثبات وهيبة معمارية كاملة (Zero Gimmick Animations) وفق أرقى معايير العلامات الفاخرة العالمية.
-        - لون الآيفوري العاجي الدافئ والراقي (#F5ECE1) المعتمد رسمياً في دليل الهوية خالي من أي تدرجات مزعجة.
-        - تفاعل ناعم وراقٍ مع تحويم الماوس يتحول فيه اللون بانسيابية إلى الذهب الشمبانيا الهادئ.
+        - لون الآيفوري العاجي الدافئ والراقي (#F2E7D5) المعتمد رسمياً في دليل الهوية خالي من أي تدرجات مزعجة.
+        - تفاعل ناعم وراقٍ مع تحويم الماوس يتحول فيه اللون بانسيابية إلى خشب الكراميل المعماري (#92683E).
       */}
       <div className="relative flex items-center justify-center transition-transform duration-300 group-hover:scale-[1.02]">
         <svg
@@ -37,7 +37,7 @@ export default function EliteLogo({
           height={dimensions.height}
           fill="currentColor"
           xmlns="http://www.w3.org/2000/svg"
-          className="text-[#F5ECE1] group-hover:text-gold transition-colors duration-400 drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
+          className="text-[#F2E7D5] group-hover:text-caramel transition-colors duration-400 drop-shadow-[0_2px_10px_rgba(0,0,0,0.6)]"
         >
           {/* === الحرف E الأول: ثلاث عوارض معمارية متوازية نقية (Wood Slats) === */}
           <rect x="2" y="4" width="24" height="3.8" rx="0.8" />
@@ -64,7 +64,7 @@ export default function EliteLogo({
 
       {/* التوصيف المعماري الثانوي (يظهر عند التفعيل فقط) */}
       {showSubtitle && (
-        <span className="mt-1 font-sans text-[9px] tracking-[0.38em] uppercase text-stone-sand/90 font-semibold group-hover:text-gold transition-colors duration-300 text-center pl-[0.38em]">
+        <span className="mt-1 font-sans text-[9px] tracking-[0.38em] uppercase text-sand/90 font-semibold group-hover:text-caramel transition-colors duration-300 text-center pl-[0.38em]">
           {subtitle || 'WOODWORKS & INTERIORS'}
         </span>
       )}
