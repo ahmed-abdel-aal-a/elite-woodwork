@@ -90,7 +90,19 @@
     "desc": "The most trusted name in bespoke architectural woodwork, luxury fit-outs, and custom millwork for sovereign and executive landmarks in Riyadh.",
     "explore_btn": "Explore Full ELITE Legacy",
     "tag_legacy": "15+ Years of Leadership",
-    "tag_factory": "Advanced Riyadh Facility"
+    "tag_factory": "Advanced Riyadh Facility",
+    "img1_title": "Executive Millwork & Hospitality",
+    "img1_desc": "Bespoke architectural joinery crafted via European 5-Axis CNC machinery.",
+    "img1_tag": "Riyadh HQ",
+    "img2_title": "Reception Suites & Acoustic Panels",
+    "img2_desc": "Bookmatched veneers with flush concealed acoustic doors.",
+    "img2_tag": "Sovereign Tier",
+    "stat1_hover_title": "100% Certified Engineering Rigor",
+    "stat1_hover_desc": "Full compliance with Saudi Building Code (SBC) and stringent fire ratings.",
+    "stat1_hover_action": "View Credentials",
+    "stat2_hover_title": "Vision 2030 Architectural Horizons",
+    "stat2_hover_desc": "Advanced acoustic and sustainable woodwork engineered for landmark developments.",
+    "stat2_hover_action": "Explore Vision"
   },
   "values": {
     "badge": "03 • Core Philosophy",
