@@ -127,6 +127,8 @@
     "desc": "End-to-end architectural wood engineering and bespoke joinery crafted for institutional projects.",
     "standards": "Key Technical Specifications:",
     "spec_sheet": "Technical Specification Sheet",
+    "rfp_btn": "Request Discipline Specifications & RFP",
+    "explore_scope_btn": "Explore Full Engineering Scope",
     "items": [
       {
         "id": "doors",
