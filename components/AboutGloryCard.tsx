@@ -21,44 +21,44 @@ export default function AboutGloryCard() {
           ref={cardRef}
           className={`relative rounded-sm overflow-hidden transition-all duration-[1800ms] ease-[0.16,1,0.3,1] group/glory ${
             isInView
-              ? 'border border-caramel/45 bg-[#151411] shadow-[0_25px_60px_rgba(0,0,0,0.7),0_0_45px_rgba(146,104,62,0.14)]'
+              ? 'border border-caramel/35 bg-[#141311] shadow-[0_25px_60px_rgba(0,0,0,0.7),0_0_30px_rgba(146,104,62,0.08)]'
               : 'border border-charcoal-border/40 bg-[#12110f] shadow-[0_15px_35px_rgba(0,0,0,0.5)]'
-          } hover:border-caramel/80 hover:shadow-[0_30px_70px_-10px_rgba(146,104,62,0.38),0_0_60px_rgba(146,104,62,0.2)]`}
+          } hover:border-caramel/55 hover:shadow-[0_25px_60px_-10px_rgba(0,0,0,0.85),0_0_35px_rgba(146,104,62,0.16)]`}
         >
-          {/* Authentic Sovereign Landmark Architectural Photographic Background Reveal (Zero Lines / 100% Cinematic) */}
+          {/* Authentic Sovereign Landmark Architectural Photographic Background Reveal (Calm, Deep & Subdued) */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
             <img
               src={assetPath('/images/projects/imf_boardroom.webp')}
               alt="ELITE Architectural Landmark"
-              className="w-full h-full object-cover object-center opacity-0 group-hover/glory:opacity-45 scale-100 group-hover/glory:scale-105 transition-all duration-1000 ease-out"
+              className="w-full h-full object-cover object-center opacity-0 group-hover/glory:opacity-30 scale-100 group-hover/glory:scale-105 transition-all duration-1000 ease-out"
             />
-            {/* Deep Cinematic Vignette: darkens sides and base to preserve 100% text readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/85 to-obsidian/70 group-hover/glory:from-obsidian/90 group-hover/glory:via-obsidian/75 group-hover/glory:to-obsidian/60 transition-colors duration-700" />
-            <div className="absolute inset-0 bg-gradient-to-t from-obsidian/90 via-transparent to-obsidian/60 pointer-events-none" />
+            {/* Deep Cinematic Vignette: preserves deep dark tone and 100% text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/90 to-obsidian/80 group-hover/glory:from-obsidian/95 group-hover/glory:via-obsidian/85 group-hover/glory:to-obsidian/75 transition-colors duration-700" />
+            <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian/75 pointer-events-none" />
           </div>
 
-          {/* Top Architectural Light Seam (Awakens calmly on scroll, illuminates on hover) */}
+          {/* Top Architectural Light Seam (Subdued) */}
           <div
-            className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-sand to-transparent transition-all duration-[1800ms] ease-out origin-center z-30 ${
-              isInView ? 'scale-x-100 opacity-60' : 'scale-x-0 opacity-0'
-            } group-hover/glory:opacity-100 group-hover/glory:scale-x-100`}
+            className={`absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-sand/60 to-transparent transition-all duration-[1800ms] ease-out origin-center z-30 ${
+              isInView ? 'scale-x-100 opacity-40' : 'scale-x-0 opacity-0'
+            } group-hover/glory:opacity-70 group-hover/glory:scale-x-100`}
           />
 
-          {/* Soft Vertical Light Plume Rising from Base upon Hover */}
-          <div className="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-caramel/25 via-walnut/15 to-transparent pointer-events-none translate-y-16 opacity-0 group-hover/glory:translate-y-0 group-hover/glory:opacity-100 transition-all duration-1000 ease-[0.16,1,0.3,1] z-0" />
+          {/* Soft Vertical Light Plume Rising from Base upon Hover (Dimmed & Subtle) */}
+          <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-caramel/15 via-walnut/8 to-transparent pointer-events-none translate-y-12 opacity-0 group-hover/glory:translate-y-0 group-hover/glory:opacity-60 transition-all duration-1000 ease-[0.16,1,0.3,1] z-0" />
 
-          {/* Ambient Wood Warmth Radial Aura */}
+          {/* Ambient Wood Warmth Radial Aura (Calm & Controlled) */}
           <div
-            className={`absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(146,104,62,0.18),transparent_70%)] pointer-events-none transition-opacity duration-[1800ms] ${
-              isInView ? 'opacity-90' : 'opacity-30'
-            } group-hover/glory:opacity-100`}
+            className={`absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(146,104,62,0.12),transparent_70%)] pointer-events-none transition-opacity duration-[1800ms] ${
+              isInView ? 'opacity-70' : 'opacity-25'
+            } group-hover/glory:opacity-75`}
           />
 
-          {/* Outer Royal Corner Brackets (Scale & Illuminate on Hover) */}
-          <div className="absolute top-2.5 start-2.5 w-4 h-4 border-t-2 border-s-2 border-caramel/40 group-hover/glory:border-sand group-hover/glory:scale-125 transition-all duration-700 z-20" />
-          <div className="absolute top-2.5 end-2.5 w-4 h-4 border-t-2 border-e-2 border-caramel/40 group-hover/glory:border-sand group-hover/glory:scale-125 transition-all duration-700 z-20" />
-          <div className="absolute bottom-2.5 start-2.5 w-4 h-4 border-b-2 border-s-2 border-caramel/40 group-hover/glory:border-sand group-hover/glory:scale-125 transition-all duration-700 z-20" />
-          <div className="absolute bottom-2.5 end-2.5 w-4 h-4 border-b-2 border-e-2 border-caramel/40 group-hover/glory:border-sand group-hover/glory:scale-125 transition-all duration-700 z-20" />
+          {/* Outer Royal Corner Brackets (Subdued Elegance) */}
+          <div className="absolute top-2.5 start-2.5 w-3.5 h-3.5 border-t border-s border-caramel/40 group-hover/glory:border-sand/70 group-hover/glory:scale-110 transition-all duration-700 z-20" />
+          <div className="absolute top-2.5 end-2.5 w-3.5 h-3.5 border-t border-e border-caramel/40 group-hover/glory:border-sand/70 group-hover/glory:scale-110 transition-all duration-700 z-20" />
+          <div className="absolute bottom-2.5 start-2.5 w-3.5 h-3.5 border-b border-s border-caramel/40 group-hover/glory:border-sand/70 group-hover/glory:scale-110 transition-all duration-700 z-20" />
+          <div className="absolute bottom-2.5 end-2.5 w-3.5 h-3.5 border-b border-e border-caramel/40 group-hover/glory:border-sand/70 group-hover/glory:scale-110 transition-all duration-700 z-20" />
 
           <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center p-6 sm:p-10 lg:p-14 z-10">
             {/* Content Side (Left Column) */}
@@ -69,11 +69,11 @@ export default function AboutGloryCard() {
                   <span className="text-xs uppercase tracking-[0.3em] text-caramel font-bold">
                     {t.about_glory.badge}
                   </span>
-                  <span className="w-12 group-hover/glory:w-24 h-[1px] bg-caramel/40 group-hover/glory:bg-sand transition-all duration-700" />
+                  <span className="w-12 group-hover/glory:w-20 h-[1px] bg-caramel/40 group-hover/glory:bg-sand/70 transition-all duration-700" />
                 </div>
 
-                {/* Monumental Headline with Smooth Royal Gradient Shift on Hover */}
-                <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-cream uppercase leading-[1.15] transition-all duration-700 group-hover/glory:text-transparent group-hover/glory:bg-clip-text group-hover/glory:bg-gradient-to-r group-hover/glory:from-cream group-hover/glory:via-sand group-hover/glory:to-caramel">
+                {/* Monumental Headline */}
+                <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-cream uppercase leading-[1.15] transition-colors duration-500 group-hover/glory:text-cream">
                   {t.about_glory.title}
                 </h2>
 
