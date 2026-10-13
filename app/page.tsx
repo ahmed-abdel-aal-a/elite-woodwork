@@ -2,8 +2,7 @@ import Preloader from '@/components/Preloader';
 import Navbar from '@/components/Navbar';
 import HeroSection from '@/components/HeroSection';
 import StatsSection from '@/components/StatsSection';
-import AboutSection from '@/components/AboutSection';
-import ValuesSection from '@/components/ValuesSection';
+import AboutGloryCard from '@/components/AboutGloryCard';
 import ScopeSection from '@/components/ScopeSection';
 import PortfolioSection from '@/components/PortfolioSection';
 import QualitySection from '@/components/QualitySection';
@@ -18,8 +17,7 @@ export default function HomePage() {
       <Navbar />
       <HeroSection />
       <StatsSection />
-      <AboutSection />
-      <ValuesSection />
+      <AboutGloryCard />
       <ScopeSection />
       <PortfolioSection />
       <QualitySection />

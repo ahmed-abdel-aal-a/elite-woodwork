@@ -23,18 +23,18 @@ export default function Footer() {
             <Link href="/" className="group focus:outline-none">
               <EliteLogo size="lg" />
             </Link>
-            <p className="text-xs uppercase tracking-[0.25em] text-gold mt-3 font-medium text-center md:text-left rtl:md:text-right">
+            <p className="text-xs uppercase tracking-[0.25em] text-caramel mt-3 font-medium text-center md:text-left rtl:md:text-right">
               {t.footer.slogan}
             </p>
           </div>
 
           <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 sm:gap-8 text-xs uppercase tracking-widest text-stone-sand">
-            <a href="#about" className="hover:text-gold transition-colors">{t.nav.about}</a>
-            <a href="#scope" className="hover:text-gold transition-colors">{t.nav.scope}</a>
-            <a href="#portfolio" className="hover:text-gold transition-colors">{t.nav.portfolio}</a>
-            <a href="#quality" className="hover:text-gold transition-colors">{t.nav.quality}</a>
-            <a href="#clients" className="hover:text-gold transition-colors">{t.nav.clients}</a>
-            <a href="#contact" className="hover:text-gold transition-colors">{t.nav.contact}</a>
+            <Link href="/about" className="hover:text-caramel transition-colors">{t.nav.about}</Link>
+            <Link href="/#scope" className="hover:text-caramel transition-colors">{t.nav.scope}</Link>
+            <Link href="/#portfolio" className="hover:text-caramel transition-colors">{t.nav.portfolio}</Link>
+            <Link href="/#quality" className="hover:text-caramel transition-colors">{t.nav.quality}</Link>
+            <Link href="/#clients" className="hover:text-caramel transition-colors">{t.nav.clients}</Link>
+            <Link href="/#contact" className="hover:text-caramel transition-colors">{t.nav.contact}</Link>
           </div>
         </div>
 

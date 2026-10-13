@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { motion, useScroll, useSpring, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, Globe } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
@@ -13,6 +14,10 @@ export default function Navbar() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 100, damping: 30, restDelta: 0.001 });
   const { lang, t, toggleLang } = useLanguage();
+  const pathname = usePathname();
+
+  const isHome = pathname === '/' || pathname === '';
+  const isAboutActive = pathname === '/about' || pathname?.startsWith('/about');
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 45);
@@ -43,19 +48,19 @@ export default function Navbar() {
 
   // الروابط التنقلية المجمعة في الجناح الأيسر
   const desktopNavLinks = [
-    { name: t.nav.about, href: '#about' },
-    { name: t.nav.scope, href: '#scope' },
-    { name: t.nav.portfolio, href: '#portfolio' },
+    { name: t.nav.about, href: '/about', isPage: true },
+    { name: t.nav.scope, href: isHome ? '#scope' : '/#scope', isPage: false },
+    { name: t.nav.portfolio, href: isHome ? '#portfolio' : '/#portfolio', isPage: false },
   ];
 
   // قائمة الموبايل الشاملة لكافة الأقسام
   const mobileNavLinks = [
-    { name: t.nav.about, href: '#about' },
-    { name: t.nav.scope, href: '#scope' },
-    { name: t.nav.portfolio, href: '#portfolio' },
-    { name: t.nav.quality, href: '#quality' },
-    { name: t.nav.clients, href: '#clients' },
-    { name: t.nav.contact, href: '#contact' },
+    { name: t.nav.about, href: '/about', isPage: true },
+    { name: t.nav.scope, href: isHome ? '#scope' : '/#scope', isPage: false },
+    { name: t.nav.portfolio, href: isHome ? '#portfolio' : '/#portfolio', isPage: false },
+    { name: t.nav.quality, href: isHome ? '#quality' : '/#quality', isPage: false },
+    { name: t.nav.clients, href: isHome ? '#clients' : '/#clients', isPage: false },
+    { name: t.nav.contact, href: isHome ? '#contact' : '/#contact', isPage: false },
   ];
 
   return (
@@ -81,16 +86,25 @@ export default function Navbar() {
         <div className="max-w-[1600px] mx-auto px-6 sm:px-10 lg:px-14 flex items-center justify-between">
           {/* الجناح الأيسر: كافة الروابط التنقلية مجمعة على يسار الشعار (Desktop Nav Links) */}
           <nav className="hidden lg:flex items-center gap-10 flex-1 justify-start">
-            {desktopNavLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="relative text-xs uppercase tracking-[0.25em] text-cream/90 hover:text-sand transition-colors py-1 group font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)]"
-              >
-                <span>{link.name}</span>
-                <span className="absolute bottom-0 left-0 w-0 h-[1.5px] bg-gradient-to-r from-caramel to-sand transition-all duration-300 group-hover:w-full" />
-              </a>
-            ))}
+            {desktopNavLinks.map((link) => {
+              const active = link.isPage && isAboutActive;
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative text-xs uppercase tracking-[0.25em] transition-colors py-1 group font-medium drop-shadow-[0_2px_4px_rgba(0,0,0,0.6)] ${
+                    active ? 'text-sand font-semibold' : 'text-cream/90 hover:text-sand'
+                  }`}
+                >
+                  <span>{link.name}</span>
+                  <span
+                    className={`absolute bottom-0 left-0 h-[1.5px] bg-gradient-to-r from-caramel to-sand transition-all duration-300 ${
+                      active ? 'w-full' : 'w-0 group-hover:w-full'
+                    }`}
+                  />
+                </Link>
+              );
+            })}
           </nav>
 
           {/* زر تبديل اللغة للموبايل والتابلت */}
@@ -128,13 +142,13 @@ export default function Navbar() {
             </button>
 
             {/* زرار طلب التواصل وتقديم العروض السيادي (Get In Touch) */}
-            <a
-              href="#contact"
+            <Link
+              href={isHome ? '#contact' : '/#contact'}
               className="relative inline-flex items-center gap-2 px-5 py-2 border border-caramel/50 bg-obsidian/40 backdrop-blur-md hover:bg-caramel/20 text-sand hover:text-cream hover:border-sand hover:shadow-[0_0_20px_rgba(146,104,62,0.35)] transition-all group overflow-hidden rounded-sm"
             >
               <span className="text-xs uppercase tracking-[0.22em] font-semibold">{t.nav.cta}</span>
               <ArrowUpRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 text-caramel group-hover:text-sand" />
-            </a>
+            </Link>
           </div>
 
           {/* زر الموبايل والتابلت المتحول فيزيائياً (Morphing Wood Slat Hamburger) */}
@@ -189,22 +203,30 @@ export default function Navbar() {
                 }}
                 className="px-6 py-6 flex flex-col gap-3"
               >
-                {mobileNavLinks.map((link) => (
-                  <motion.a
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMobileMenuOpen(false)}
-                    variants={{
-                      hidden: { opacity: 0, x: -12 },
-                      visible: { opacity: 1, x: 0 },
-                    }}
-                    transition={{ duration: 0.25, ease: 'easeOut' }}
-                    className="flex items-center justify-between py-2 border-b border-charcoal-border/30 text-xs uppercase tracking-[0.2em] text-cream hover:text-sand transition-colors font-medium"
-                  >
-                    <span>{link.name}</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 text-stone-slate" />
-                  </motion.a>
-                ))}
+                {mobileNavLinks.map((link) => {
+                  const active = link.isPage && isAboutActive;
+                  return (
+                    <motion.div
+                      key={link.href}
+                      variants={{
+                        hidden: { opacity: 0, x: -12 },
+                        visible: { opacity: 1, x: 0 },
+                      }}
+                      transition={{ duration: 0.25, ease: 'easeOut' }}
+                    >
+                      <Link
+                        href={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={`flex items-center justify-between py-2 border-b border-charcoal-border/30 text-xs uppercase tracking-[0.2em] transition-colors font-medium ${
+                          active ? 'text-sand font-bold' : 'text-cream hover:text-sand'
+                        }`}
+                      >
+                        <span>{link.name}</span>
+                        <ArrowUpRight className={`w-3.5 h-3.5 ${active ? 'text-caramel' : 'text-stone-slate'}`} />
+                      </Link>
+                    </motion.div>
+                  );
+                })}
 
                 <motion.div
                   variants={{
@@ -225,14 +247,14 @@ export default function Navbar() {
                     <span>{lang === 'en' ? 'التحويل إلى اللغة العربية' : 'Switch to English'}</span>
                   </button>
 
-                  <a
-                    href="#contact"
+                  <Link
+                    href={isHome ? '#contact' : '/#contact'}
                     onClick={() => setMobileMenuOpen(false)}
                     className="w-full text-center py-3 border border-caramel/50 bg-caramel/20 hover:bg-caramel/30 text-cream text-xs uppercase tracking-[0.2em] font-semibold shadow-[0_0_15px_rgba(146,104,62,0.25)] flex items-center justify-center gap-2 rounded-sm"
                   >
                     <span>{t.nav.cta}</span>
                     <ArrowUpRight className="w-4 h-4 text-sand" />
-                  </a>
+                  </Link>
                 </motion.div>
               </motion.div>
             </motion.div>
