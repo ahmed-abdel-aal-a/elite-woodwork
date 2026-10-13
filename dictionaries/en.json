@@ -102,7 +102,8 @@
     "stat1_hover_action": "View Credentials",
     "stat2_hover_title": "Vision 2030 Architectural Horizons",
     "stat2_hover_desc": "Advanced acoustic and sustainable woodwork engineered for landmark developments.",
-    "stat2_hover_action": "Explore Vision"
+    "stat2_hover_action": "Explore Vision",
+    "reveal_hint": "Hover to reveal full legacy"
   },
   "values": {
     "badge": "03 • Core Philosophy",

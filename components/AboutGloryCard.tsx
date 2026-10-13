@@ -1,8 +1,8 @@
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { ArrowUpRight, Award, Building2 } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 import { assetPath } from '@/lib/assets';
@@ -10,35 +10,53 @@ import { assetPath } from '@/lib/assets';
 export default function AboutGloryCard() {
   const { t, lang } = useLanguage();
   const isRtl = lang === 'ar';
+  const cardRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(cardRef, { amount: 0.2, once: false });
 
   return (
     <section id="about" className="py-20 sm:py-24 bg-obsidian text-stone-sand overflow-hidden border-b border-charcoal-border">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-10 lg:px-14">
-        {/* Architectural Teaser Glory Card Container with Atmospheric Transformations */}
-        <motion.div
-          initial={{ opacity: 0, y: 35, filter: 'blur(8px)' }}
-          whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-          viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="relative rounded-sm border border-charcoal-border hover:border-caramel/70 bg-[#141311] hover:bg-gradient-to-br hover:from-[#1d1915] hover:via-[#161412] hover:to-[#11100e] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.6)] hover:shadow-[0_25px_65px_-10px_rgba(146,104,62,0.32),0_0_50px_rgba(146,104,62,0.15)] transition-all duration-700 ease-out group/glory"
+        {/* Architectural Teaser Glory Card with Calm Scroll Illumination & Slat Shutter Reveal */}
+        <div
+          ref={cardRef}
+          className={`relative rounded-sm overflow-hidden transition-all duration-[1800ms] ease-[0.16,1,0.3,1] group/glory ${
+            isInView
+              ? 'border border-caramel/45 bg-[#161411] shadow-[0_25px_60px_rgba(0,0,0,0.7),0_0_45px_rgba(146,104,62,0.14)]'
+              : 'border border-charcoal-border/40 bg-[#12110f] shadow-[0_15px_35px_rgba(0,0,0,0.5)]'
+          } hover:border-caramel/80 hover:bg-gradient-to-br hover:from-[#1e1915] hover:via-[#161412] hover:to-[#11100e] hover:shadow-[0_30px_70px_-10px_rgba(146,104,62,0.38),0_0_60px_rgba(146,104,62,0.2)]`}
         >
-          {/* Top Architectural Light Beam (Expands Smoothly on Hover) */}
-          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-sand to-transparent scale-x-0 group-hover/glory:scale-x-100 transition-transform duration-700 ease-[0.16,1,0.3,1] origin-center z-30" />
+          {/* Top Architectural Light Seam (Awakens calmly on scroll, expands on hover) */}
+          <div
+            className={`absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-sand to-transparent transition-all duration-[1800ms] ease-out origin-center z-30 ${
+              isInView ? 'scale-x-100 opacity-60' : 'scale-x-0 opacity-0'
+            } group-hover/glory:opacity-100 group-hover/glory:scale-x-100`}
+          />
 
-          {/* Bottom Ambient Vertical Light Plume (Rises Smoothly from Bottom on Hover) */}
-          <div className="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-caramel/25 via-walnut/15 to-transparent pointer-events-none translate-y-16 opacity-0 group-hover/glory:translate-y-0 group-hover/glory:opacity-100 transition-all duration-700 ease-[0.16,1,0.3,1] z-0" />
+          {/* Parametric Fluted Timber Slat Shutter (Awakens upon scroll, expands upon hover) */}
+          <div
+            className={`absolute inset-0 bg-[linear-gradient(90deg,transparent_0px,rgba(146,104,62,0.08)_2px,rgba(207,184,152,0.03)_4px,transparent_7px)] bg-[size:26px_100%] pointer-events-none transition-all duration-[1800ms] ease-out ${
+              isInView ? 'opacity-85' : 'opacity-20'
+            } group-hover/glory:opacity-100 group-hover/glory:scale-105 group-hover/glory:bg-[size:30px_100%]`}
+          />
+
+          {/* Soft Golden Sheen Sweeping through the Shutter on Hover */}
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-sand/15 to-transparent pointer-events-none -translate-x-full group-hover/glory:translate-x-full transition-transform duration-1000 ease-in-out opacity-0 group-hover/glory:opacity-100 z-1" />
+
+          {/* Soft Vertical Light Plume Rising from Base upon Hover */}
+          <div className="absolute inset-x-0 bottom-0 h-72 bg-gradient-to-t from-caramel/25 via-walnut/15 to-transparent pointer-events-none translate-y-16 opacity-0 group-hover/glory:translate-y-0 group-hover/glory:opacity-100 transition-all duration-1000 ease-[0.16,1,0.3,1] z-0" />
 
           {/* Ambient Wood Warmth Radial Aura */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(146,104,62,0.15),transparent_70%)] pointer-events-none transition-opacity duration-700 group-hover/glory:opacity-100 opacity-60" />
-
-          {/* Subdued Background Architectural Grid Lines */}
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none group-hover/glory:opacity-80 transition-opacity duration-700" />
+          <div
+            className={`absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(146,104,62,0.18),transparent_70%)] pointer-events-none transition-opacity duration-[1800ms] ${
+              isInView ? 'opacity-90' : 'opacity-30'
+            } group-hover/glory:opacity-100`}
+          />
 
           {/* Outer Royal Corner Brackets (Scale & Illuminate on Hover) */}
-          <div className="absolute top-2.5 start-2.5 w-4 h-4 border-t-2 border-s-2 border-caramel/40 group-hover/glory:border-sand group-hover/glory:scale-125 transition-all duration-500 z-20" />
-          <div className="absolute top-2.5 end-2.5 w-4 h-4 border-t-2 border-e-2 border-caramel/40 group-hover/glory:border-sand group-hover/glory:scale-125 transition-all duration-500 z-20" />
-          <div className="absolute bottom-2.5 start-2.5 w-4 h-4 border-b-2 border-s-2 border-caramel/40 group-hover/glory:border-sand group-hover/glory:scale-125 transition-all duration-500 z-20" />
-          <div className="absolute bottom-2.5 end-2.5 w-4 h-4 border-b-2 border-e-2 border-caramel/40 group-hover/glory:border-sand group-hover/glory:scale-125 transition-all duration-500 z-20" />
+          <div className="absolute top-2.5 start-2.5 w-4 h-4 border-t-2 border-s-2 border-caramel/40 group-hover/glory:border-sand group-hover/glory:scale-125 transition-all duration-700 z-20" />
+          <div className="absolute top-2.5 end-2.5 w-4 h-4 border-t-2 border-e-2 border-caramel/40 group-hover/glory:border-sand group-hover/glory:scale-125 transition-all duration-700 z-20" />
+          <div className="absolute bottom-2.5 start-2.5 w-4 h-4 border-b-2 border-s-2 border-caramel/40 group-hover/glory:border-sand group-hover/glory:scale-125 transition-all duration-700 z-20" />
+          <div className="absolute bottom-2.5 end-2.5 w-4 h-4 border-b-2 border-e-2 border-caramel/40 group-hover/glory:border-sand group-hover/glory:scale-125 transition-all duration-700 z-20" />
 
           <div className="relative grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center p-6 sm:p-10 lg:p-14 z-10">
             {/* Content Side (Left Column) */}
@@ -49,11 +67,11 @@ export default function AboutGloryCard() {
                   <span className="text-xs uppercase tracking-[0.3em] text-caramel font-bold">
                     {t.about_glory.badge}
                   </span>
-                  <span className="w-12 group-hover/glory:w-24 h-[1px] bg-caramel/40 group-hover/glory:bg-sand transition-all duration-500" />
+                  <span className="w-12 group-hover/glory:w-24 h-[1px] bg-caramel/40 group-hover/glory:bg-sand transition-all duration-700" />
                 </div>
 
                 {/* Monumental Headline with Smooth Royal Gradient Shift on Hover */}
-                <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-cream uppercase leading-[1.15] transition-all duration-500 group-hover/glory:text-transparent group-hover/glory:bg-clip-text group-hover/glory:bg-gradient-to-r group-hover/glory:from-cream group-hover/glory:via-sand group-hover/glory:to-caramel">
+                <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-cream uppercase leading-[1.15] transition-all duration-700 group-hover/glory:text-transparent group-hover/glory:bg-clip-text group-hover/glory:bg-gradient-to-r group-hover/glory:from-cream group-hover/glory:via-sand group-hover/glory:to-caramel">
                   {t.about_glory.title}
                 </h2>
 
@@ -76,15 +94,30 @@ export default function AboutGloryCard() {
                 </div>
               </div>
 
-              {/* Exploration CTA Button */}
-              <div className="mt-10 sm:mt-12 pt-6 border-t border-charcoal-border/60 flex items-center justify-between flex-wrap gap-4">
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-3 px-6 py-3.5 bg-caramel/20 hover:bg-caramel/35 group-hover/glory:bg-caramel/25 border border-caramel/50 group-hover/glory:border-caramel/70 hover:border-sand text-cream font-semibold text-xs sm:text-sm uppercase tracking-[0.2em] transition-all duration-300 rounded-sm shadow-[0_0_20px_rgba(146,104,62,0.25)] hover:shadow-[0_0_35px_rgba(146,104,62,0.5)] group/btn"
-                >
-                  <span>{t.about_glory.explore_btn}</span>
-                  <ArrowUpRight className={`w-4 h-4 text-sand transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 ${isRtl ? 'rotate-[-90deg] group-hover/btn:-translate-x-0.5 group-hover/btn:-translate-y-0.5' : ''}`} />
-                </Link>
+              {/* Action Area: Resting Architectural Cue + Rising Gateway Button with Golden Sheen */}
+              <div className="mt-10 sm:mt-12 pt-6 border-t border-charcoal-border/60 relative min-h-[58px] flex items-center justify-between flex-wrap gap-4">
+                {/* Desktop Resting Architectural Cue (Visible when NOT hovering on desktop) */}
+                <div className="hidden lg:flex items-center gap-3 text-xs font-mono uppercase tracking-[0.22em] text-sand/80 transition-all duration-500 group-hover/glory:opacity-0 group-hover/glory:-translate-y-2 group-hover/glory:pointer-events-none">
+                  <span className="w-2 h-2 rounded-full bg-caramel animate-pulse" />
+                  <span>{t.about_glory.reveal_hint}</span>
+                  <span className="w-8 h-[1px] bg-caramel/40" />
+                </div>
+
+                {/* The Gateway Button (Reveals & Rises on Hover on Desktop, Always Accessible on Mobile) */}
+                <div className="w-full lg:w-auto transition-all duration-700 ease-[0.16,1,0.3,1] lg:opacity-0 lg:translate-y-4 lg:pointer-events-none group-hover/glory:opacity-100 group-hover/glory:translate-y-0 group-hover/glory:pointer-events-auto">
+                  <Link
+                    href="/about"
+                    className="relative inline-flex items-center justify-between sm:justify-start gap-4 px-6 sm:px-8 py-3.5 bg-gradient-to-r from-obsidian via-[#1e1915] to-obsidian border border-caramel/60 hover:border-sand text-cream font-semibold text-xs sm:text-sm uppercase tracking-[0.2em] transition-all duration-300 rounded-sm shadow-[0_0_25px_rgba(146,104,62,0.3)] hover:shadow-[0_0_40px_rgba(146,104,62,0.6)] group/btn overflow-hidden"
+                  >
+                    {/* Golden Light Sheen across the Button on Hover */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-sand/25 to-transparent -translate-x-full group-hover/btn:translate-x-full transition-transform duration-1000 ease-in-out pointer-events-none" />
+
+                    <span>{t.about_glory.explore_btn}</span>
+                    <span className="p-1 rounded-sm bg-caramel/20 border border-caramel/40 group-hover/btn:border-sand text-sand group-hover/btn:text-cream transition-colors">
+                      <ArrowUpRight className={`w-4 h-4 transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 ${isRtl ? 'rotate-[-90deg] group-hover/btn:-translate-x-0.5 group-hover/btn:-translate-y-0.5' : ''}`} />
+                    </span>
+                  </Link>
+                </div>
 
                 <span className="text-[11px] uppercase tracking-widest text-stone-slate font-mono group-hover/glory:text-stone-sand/70 transition-colors duration-500">
                   ELITE ARCHITECTURAL JOINERY • RIYADH
@@ -259,7 +292,7 @@ export default function AboutGloryCard() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
