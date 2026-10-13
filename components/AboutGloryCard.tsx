@@ -25,16 +25,16 @@ export default function AboutGloryCard() {
               : 'border border-charcoal-border/40 bg-[#12110f] shadow-[0_15px_35px_rgba(0,0,0,0.5)]'
           } hover:border-caramel/55 hover:shadow-[0_25px_60px_-10px_rgba(0,0,0,0.85),0_0_35px_rgba(146,104,62,0.16)]`}
         >
-          {/* Authentic Sovereign Landmark Architectural Photographic Background Reveal (Calm, Deep & Subdued) */}
+          {/* Authentic Sovereign Landmark Architectural Photographic Background Reveal (High Clarity & Subdued Color) */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
             <img
               src={assetPath('/images/projects/imf_boardroom.webp')}
               alt="ELITE Architectural Landmark"
-              className="w-full h-full object-cover object-center opacity-0 group-hover/glory:opacity-30 scale-100 group-hover/glory:scale-105 transition-all duration-1000 ease-out"
+              className="w-full h-full object-cover object-center opacity-0 group-hover/glory:opacity-55 scale-100 group-hover/glory:scale-105 filter group-hover/glory:saturate-[0.70] group-hover/glory:brightness-[0.92] transition-all duration-1000 ease-out"
             />
-            {/* Deep Cinematic Vignette: preserves deep dark tone and 100% text readability */}
-            <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/90 to-obsidian/80 group-hover/glory:from-obsidian/95 group-hover/glory:via-obsidian/85 group-hover/glory:to-obsidian/75 transition-colors duration-700" />
-            <div className="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian/75 pointer-events-none" />
+            {/* Focused Cinematic Vignette: protects text on left, reveals clear boardroom on right */}
+            <div className="absolute inset-0 bg-gradient-to-r from-obsidian via-obsidian/80 to-obsidian/30 group-hover/glory:from-obsidian/90 group-hover/glory:via-obsidian/65 group-hover/glory:to-obsidian/20 transition-colors duration-700" />
+            <div className="absolute inset-0 bg-gradient-to-t from-obsidian/50 via-transparent to-obsidian/40 pointer-events-none" />
           </div>
 
           {/* Top Architectural Light Seam (Subdued) */}
@@ -45,13 +45,13 @@ export default function AboutGloryCard() {
           />
 
           {/* Soft Vertical Light Plume Rising from Base upon Hover (Dimmed & Subtle) */}
-          <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-caramel/15 via-walnut/8 to-transparent pointer-events-none translate-y-12 opacity-0 group-hover/glory:translate-y-0 group-hover/glory:opacity-60 transition-all duration-1000 ease-[0.16,1,0.3,1] z-0" />
+          <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-caramel/10 via-transparent to-transparent pointer-events-none translate-y-12 opacity-0 group-hover/glory:translate-y-0 group-hover/glory:opacity-40 transition-all duration-1000 ease-[0.16,1,0.3,1] z-0" />
 
           {/* Ambient Wood Warmth Radial Aura (Calm & Controlled) */}
           <div
-            className={`absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(146,104,62,0.12),transparent_70%)] pointer-events-none transition-opacity duration-[1800ms] ${
-              isInView ? 'opacity-70' : 'opacity-25'
-            } group-hover/glory:opacity-75`}
+            className={`absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(146,104,62,0.08),transparent_70%)] pointer-events-none transition-opacity duration-[1800ms] ${
+              isInView ? 'opacity-60' : 'opacity-20'
+            } group-hover/glory:opacity-50`}
           />
 
           {/* Outer Royal Corner Brackets (Subdued Elegance) */}
