@@ -77,9 +77,3 @@
   }
 }
 
-/* عزل الهوفر تماماً عن شاشات اللمس والموبايل لمنع Sticky Hover */
-@media (hover: none) and (pointer: coarse) {
-  .desktop-only-cursor {
-    display: none !important;
-  }
-}

@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Montserrat, Cinzel, IBM_Plex_Sans_Arabic } from 'next/font/google';
 import './globals.css';
 import { LanguageProvider } from '@/context/LanguageContext';
-import MagneticCursor from '@/components/MagneticCursor';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -60,7 +59,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body className="bg-obsidian antialiased selection:bg-gold selection:text-obsidian">
         <LanguageProvider>
-          <MagneticCursor />
           {children}
         </LanguageProvider>
       </body>
