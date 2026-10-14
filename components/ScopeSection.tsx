@@ -56,42 +56,42 @@ export default function ScopeSection() {
   const activeTag = isRtl ? scopeTags[activeTab.id]?.ar : scopeTags[activeTab.id]?.en;
 
   return (
-    <section id="scope" className="py-24 sm:py-28 bg-obsidian border-b border-charcoal-border overflow-hidden relative">
-      <div className="max-w-[1600px] mx-auto px-4 sm:px-10 lg:px-14">
-        {/* Section Header */}
+    <section id="scope" className="py-10 sm:py-14 lg:py-14 bg-obsidian border-b border-charcoal-border overflow-hidden relative">
+      <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
+        {/* Compact Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 35, filter: 'blur(8px)' }}
+          initial={{ opacity: 0, y: 25, filter: 'blur(8px)' }}
           whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6"
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4"
         >
           <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="text-xs uppercase tracking-[0.3em] text-caramel font-bold font-mono">
+            <div className="flex items-center gap-2.5 mb-2">
+              <span className="text-xs uppercase tracking-[0.25em] text-caramel font-bold font-mono">
                 {t.scope.badge}
               </span>
-              <span className="w-12 h-[1px] bg-caramel/40" />
+              <span className="w-10 h-[1px] bg-caramel/40" />
             </div>
-            <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold uppercase text-cream tracking-tight leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold uppercase text-cream tracking-tight leading-tight">
               {t.scope.title}
             </h2>
           </div>
-          <p className="text-sm text-stone-sand/90 max-w-md font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-stone-sand/80 max-w-md font-light leading-relaxed">
             {t.scope.desc}
           </p>
         </motion.div>
 
-        {/* 1. Desktop Two-Column Master-Detail Layout */}
+        {/* 1. Desktop Compact Viewport Cockpit Layout */}
         <motion.div
-          initial={{ opacity: 0, y: 40, scale: 0.98, filter: 'blur(8px)' }}
+          initial={{ opacity: 0, y: 30, scale: 0.99, filter: 'blur(8px)' }}
           whileInView={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
           viewport={{ once: true, amount: 0.15 }}
-          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="hidden lg:grid lg:grid-cols-12 gap-8 items-stretch"
+          transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="hidden lg:grid lg:grid-cols-12 gap-6 xl:gap-8 items-stretch"
         >
-          {/* Left Column: Interactive Tab Buttons (Hover Live Teleport) */}
-          <div className="lg:col-span-5 flex flex-col justify-between gap-3.5">
+          {/* Left Column: Compact Precision Buttons */}
+          <div className="lg:col-span-5 flex flex-col justify-between gap-2.5 xl:gap-3">
             {t.scope.items.map((s) => {
               const IconComp = scopeIcons[s.id] || DoorClosed;
               const isSelected = activeTab.id === s.id;
@@ -101,47 +101,47 @@ export default function ScopeSection() {
                   type="button"
                   onMouseEnter={() => setActiveTabId(s.id)}
                   onClick={() => setActiveTabId(s.id)}
-                  className={`relative text-left rtl:text-right p-5 transition-all duration-300 border flex items-center justify-between group rounded-sm overflow-hidden cursor-pointer ${
+                  className={`relative text-left rtl:text-right px-4 py-3 xl:px-4.5 xl:py-3.5 transition-all duration-200 border flex items-center justify-between group rounded-sm overflow-hidden cursor-pointer ${
                     isSelected
-                      ? 'bg-[#181613] border-caramel/75 shadow-[0_12px_30px_rgba(0,0,0,0.65),0_0_25px_rgba(146,104,62,0.18)]'
-                      : 'bg-[#12110f] border-charcoal-border/50 hover:border-caramel/40 hover:bg-[#151411] hover:shadow-[0_8px_20px_rgba(0,0,0,0.4)]'
+                      ? 'bg-[#181613] border-caramel/75 shadow-[0_8px_25px_rgba(0,0,0,0.65),0_0_20px_rgba(146,104,62,0.18)]'
+                      : 'bg-[#12110f] border-charcoal-border/50 hover:border-caramel/40 hover:bg-[#151411]'
                   }`}
                 >
                   {/* Sliding Laser Indicator on Active Card */}
                   {isSelected && (
                     <motion.div
                       layoutId="scopeLaserBar"
-                      className="absolute top-0 bottom-0 start-0 w-[3px] bg-gradient-to-b from-sand via-caramel to-sand shadow-[0_0_12px_rgba(146,104,62,0.85)] z-20"
-                      transition={{ type: 'spring', stiffness: 350, damping: 30 }}
+                      className="absolute top-0 bottom-0 start-0 w-[3px] bg-gradient-to-b from-sand via-caramel to-sand shadow-[0_0_10px_rgba(146,104,62,0.85)] z-20"
+                      transition={{ type: 'spring', stiffness: 400, damping: 32 }}
                     />
                   )}
 
                   {/* Corner Brackets on Active Card */}
                   {isSelected && (
                     <>
-                      <div className="absolute top-2 end-2 w-2 h-2 border-t border-e border-caramel/50 z-20 pointer-events-none" />
-                      <div className="absolute bottom-2 end-2 w-2 h-2 border-b border-e border-caramel/50 z-20 pointer-events-none" />
+                      <div className="absolute top-1.5 end-1.5 w-1.5 h-1.5 border-t border-e border-caramel/50 z-20 pointer-events-none" />
+                      <div className="absolute bottom-1.5 end-1.5 w-1.5 h-1.5 border-b border-e border-caramel/50 z-20 pointer-events-none" />
                     </>
                   )}
 
-                  <div className="flex items-center gap-4 relative z-10">
+                  <div className="flex items-center gap-3.5 relative z-10 min-w-0">
                     <span
-                      className={`font-mono text-xs font-bold transition-colors duration-300 ${
+                      className={`font-mono text-xs font-bold transition-colors duration-200 shrink-0 ${
                         isSelected ? 'text-sand' : 'text-stone-slate group-hover:text-sand/75'
                       }`}
                     >
                       {s.number}
                     </span>
-                    <div>
+                    <div className="min-w-0">
                       <h4
-                        className={`text-sm font-bold uppercase tracking-wider transition-colors duration-300 ${
+                        className={`text-xs sm:text-sm font-bold uppercase tracking-wider transition-colors duration-200 truncate ${
                           isSelected ? 'text-cream' : 'text-stone-sand group-hover:text-cream'
                         }`}
                       >
                         {s.title}
                       </h4>
                       <p
-                        className={`text-[11px] font-light mt-0.5 transition-colors duration-300 ${
+                        className={`text-[10.5px] font-light mt-0.5 transition-colors duration-200 truncate ${
                           isSelected ? 'text-stone-sand/90' : 'text-stone-slate group-hover:text-stone-sand/70'
                         }`}
                       >
@@ -150,19 +150,19 @@ export default function ScopeSection() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3 shrink-0 relative z-10">
+                  <div className="flex items-center gap-2.5 shrink-0 relative z-10 ms-2">
                     <IconComp
-                      className={`w-5 h-5 transition-all duration-300 ${
+                      className={`w-4.5 h-4.5 transition-all duration-200 ${
                         isSelected
-                          ? 'text-caramel scale-110'
+                          ? 'text-caramel scale-105'
                           : 'text-stone-slate group-hover:text-sand group-hover:scale-105'
                       }`}
                     />
                     <ArrowUpRight
-                      className={`w-4 h-4 transition-all duration-300 ${
+                      className={`w-3.5 h-3.5 transition-all duration-200 ${
                         isSelected
                           ? 'text-sand opacity-100 translate-x-0'
-                          : 'text-stone-slate/30 opacity-0 -translate-x-2 group-hover:opacity-60 group-hover:translate-x-0'
+                          : 'text-stone-slate/30 opacity-0 -translate-x-1.5 group-hover:opacity-60 group-hover:translate-x-0'
                       } ${isRtl ? 'rotate-[-90deg]' : ''}`}
                     />
                   </div>
@@ -171,8 +171,8 @@ export default function ScopeSection() {
             })}
           </div>
 
-          {/* Right Column: Master Showcase Panel */}
-          <div className="lg:col-span-7 bg-[#141311] border border-charcoal-border/70 p-8 lg:p-10 relative overflow-hidden shadow-[0_25px_60px_rgba(0,0,0,0.7),0_0_35px_rgba(146,104,62,0.08)] rounded-sm min-h-[600px] flex flex-col justify-between">
+          {/* Right Column: Compact Master Showcase Panel */}
+          <div className="lg:col-span-7 bg-[#141311] border border-charcoal-border/70 p-5 xl:p-6 relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.7),0_0_30px_rgba(146,104,62,0.08)] rounded-sm flex flex-col justify-between">
             {/* Top Laser Seam */}
             <div className="absolute top-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-sand/50 to-transparent z-20 pointer-events-none" />
 
@@ -180,89 +180,89 @@ export default function ScopeSection() {
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(146,104,62,0.08),transparent_70%)] pointer-events-none z-0" />
 
             {/* Royal Corner Brackets */}
-            <div className="absolute top-2.5 start-2.5 w-3 h-3 border-t border-s border-caramel/40 z-20 pointer-events-none" />
-            <div className="absolute top-2.5 end-2.5 w-3 h-3 border-t border-e border-caramel/40 z-20 pointer-events-none" />
-            <div className="absolute bottom-2.5 start-2.5 w-3 h-3 border-b border-s border-caramel/40 z-20 pointer-events-none" />
-            <div className="absolute bottom-2.5 end-2.5 w-3 h-3 border-b border-e border-caramel/40 z-20 pointer-events-none" />
+            <div className="absolute top-2 start-2 w-2.5 h-2.5 border-t border-s border-caramel/40 z-20 pointer-events-none" />
+            <div className="absolute top-2 end-2 w-2.5 h-2.5 border-t border-e border-caramel/40 z-20 pointer-events-none" />
+            <div className="absolute bottom-2 start-2 w-2.5 h-2.5 border-b border-s border-caramel/40 z-20 pointer-events-none" />
+            <div className="absolute bottom-2 end-2 w-2.5 h-2.5 border-b border-e border-caramel/40 z-20 pointer-events-none" />
 
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab.id}
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -8 }}
-                transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-                className="space-y-6 relative z-10 flex-1 flex flex-col justify-between"
+                exit={{ opacity: 0, y: -6 }}
+                transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
+                className="relative z-10 flex-1 flex flex-col justify-between"
               >
                 <div>
-                  {/* Architectural Image Display Frame */}
-                  <div className="relative h-72 sm:h-96 w-full overflow-hidden rounded-sm border border-charcoal-border/60 group/image">
+                  {/* Widescreen Cinematic Image Frame */}
+                  <div className="relative h-48 xl:h-52 w-full overflow-hidden rounded-sm border border-charcoal-border/60 group/image">
                     <img
                       src={activeImage}
                       alt={activeTab.title}
-                      className="w-full h-full object-cover object-center scale-100 group-hover/image:scale-105 filter saturate-[0.85] brightness-[0.95] transition-transform duration-1000 ease-out"
+                      className="w-full h-full object-cover object-center scale-100 group-hover/image:scale-105 filter saturate-[0.85] brightness-[0.95] transition-transform duration-700 ease-out"
                       loading="eager"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-obsidian/85 via-obsidian/20 to-transparent pointer-events-none" />
-                    <div className="absolute inset-0 bg-gradient-to-r from-obsidian/40 via-transparent to-obsidian/40 pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-obsidian/30 via-transparent to-obsidian/30 pointer-events-none" />
 
                     {/* Spec Sheet Badge */}
-                    <div className="absolute top-3.5 start-3.5 flex items-center gap-2 px-3 py-1.5 bg-obsidian/90 backdrop-blur-md border border-caramel/50 text-[10px] font-mono text-sand uppercase tracking-wider shadow-lg rounded-xs">
+                    <div className="absolute top-2.5 start-2.5 flex items-center gap-1.5 px-2.5 py-1 bg-obsidian/90 backdrop-blur-md border border-caramel/50 text-[9.5px] font-mono text-sand uppercase tracking-wider shadow-lg rounded-xs">
                       <span className="w-1.5 h-1.5 rounded-full bg-caramel animate-pulse" />
                       <span>{t.scope.spec_sheet}</span>
                     </div>
 
                     {/* Project Landmark Tag */}
-                    <div className="absolute bottom-3 end-3 px-2.5 py-1 bg-obsidian/85 backdrop-blur-md border border-charcoal-border/60 text-[9px] font-mono uppercase tracking-widest text-stone-sand/90">
+                    <div className="absolute bottom-2 end-2 px-2.5 py-0.5 bg-obsidian/85 backdrop-blur-md border border-charcoal-border/60 text-[8.5px] font-mono uppercase tracking-widest text-stone-sand/90">
                       <span>{activeTag}</span>
                     </div>
                   </div>
 
                   {/* Headline & Description */}
-                  <div className="mt-6">
-                    <div className="flex items-center gap-2.5 mb-2">
-                      <span className="font-mono text-xs text-caramel font-bold tracking-widest">
+                  <div className="mt-3.5">
+                    <div className="flex items-center gap-2 mb-1">
+                      <span className="font-mono text-[11px] text-caramel font-bold tracking-widest">
                         {activeTab.number} • ELITE SPECIFICATION
                       </span>
-                      <span className="w-8 h-[1px] bg-caramel/30" />
+                      <span className="w-6 h-[1px] bg-caramel/30" />
                     </div>
-                    <h3 className="text-2xl sm:text-3xl font-bold uppercase text-cream tracking-wide">
+                    <h3 className="text-xl xl:text-2xl font-bold uppercase text-cream tracking-wide">
                       {activeTab.title}
                     </h3>
-                    <p className="mt-3 text-sm text-stone-sand/90 font-light leading-relaxed">
+                    <p className="mt-1.5 text-xs text-stone-sand/90 font-light leading-relaxed">
                       {activeTab.desc}
                     </p>
                   </div>
                 </div>
 
                 {/* Key Technical Standards */}
-                <div className="pt-5 border-t border-charcoal-border/70">
-                  <div className="flex items-center justify-between mb-3.5">
-                    <h4 className="text-xs uppercase tracking-widest text-sand font-bold font-mono">
+                <div className="pt-3 border-t border-charcoal-border/70 mt-3">
+                  <div className="flex items-center justify-between mb-2">
+                    <h4 className="text-[11px] uppercase tracking-wider text-sand font-bold font-mono">
                       {t.scope.standards}
                     </h4>
-                    <span className="text-[10px] font-mono text-stone-slate uppercase tracking-wider">
+                    <span className="text-[9.5px] font-mono text-stone-slate uppercase tracking-wider">
                       SBC & ISO COMPLIANT
                     </span>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                     {activeTab.specs.map((spec, idx) => (
                       <div
                         key={idx}
-                        className="flex items-center gap-2.5 px-3 py-2 bg-obsidian/60 border border-charcoal-border/50 rounded-sm text-xs text-stone-sand hover:border-caramel/40 transition-colors"
+                        className="flex items-center gap-2 px-2.5 py-1.5 bg-obsidian/60 border border-charcoal-border/50 rounded-sm text-[11px] text-stone-sand hover:border-caramel/40 transition-colors"
                       >
                         <span className="w-1.5 h-1.5 bg-caramel rounded-full shrink-0" />
-                        <span>{spec}</span>
+                        <span className="truncate">{spec}</span>
                       </div>
                     ))}
                   </div>
                 </div>
 
                 {/* Action Footer */}
-                <div className="pt-5 border-t border-charcoal-border/60 flex items-center justify-between flex-wrap gap-4 mt-auto">
+                <div className="pt-3 border-t border-charcoal-border/60 flex items-center justify-between flex-wrap gap-3 mt-3">
                   <Link
                     href="#contact"
-                    className="inline-flex items-center gap-3 px-5 py-2.5 bg-gradient-to-r from-obsidian via-[#1e1915] to-obsidian border border-caramel/60 hover:border-sand hover:bg-caramel/20 text-cream text-xs uppercase tracking-[0.16em] font-semibold transition-all duration-300 rounded-sm shadow-[0_0_20px_rgba(146,104,62,0.2)] hover:shadow-[0_0_35px_rgba(146,104,62,0.4)] group/btn"
+                    className="inline-flex items-center gap-2.5 px-4 py-2 bg-gradient-to-r from-obsidian via-[#1e1915] to-obsidian border border-caramel/60 hover:border-sand hover:bg-caramel/20 text-cream text-[11px] uppercase tracking-[0.14em] font-semibold transition-all duration-300 rounded-sm shadow-[0_0_15px_rgba(146,104,62,0.2)] hover:shadow-[0_0_25px_rgba(146,104,62,0.35)] group/btn"
                   >
                     <span>{t.scope.rfp_btn}</span>
                     <ArrowUpRight
@@ -272,7 +272,7 @@ export default function ScopeSection() {
                     />
                   </Link>
 
-                  <span className="text-[10px] font-mono text-stone-slate uppercase tracking-widest">
+                  <span className="text-[9.5px] font-mono text-stone-slate uppercase tracking-widest">
                     ELITE ARCHITECTURAL JOINERY • RIYADH
                   </span>
                 </div>
@@ -283,11 +283,11 @@ export default function ScopeSection() {
 
         {/* 2. Mobile Layout (Unified Seamless Accordion) */}
         <motion.div
-          initial={{ opacity: 0, y: 35, scale: 0.98, filter: 'blur(8px)' }}
+          initial={{ opacity: 0, y: 30, scale: 0.98, filter: 'blur(8px)' }}
           whileInView={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-          className="lg:hidden flex flex-col gap-3.5"
+          className="lg:hidden flex flex-col gap-3"
         >
           {t.scope.items.map((s) => {
             const IconComp = scopeIcons[s.id] || DoorClosed;
@@ -300,7 +300,7 @@ export default function ScopeSection() {
                 key={s.id}
                 className={`transition-all duration-300 rounded-sm border overflow-hidden ${
                   isSelected
-                    ? 'bg-[#181613] border-caramel/75 shadow-[0_10px_25px_rgba(0,0,0,0.6),0_0_20px_rgba(146,104,62,0.18)]'
+                    ? 'bg-[#181613] border-caramel/75 shadow-[0_8px_20px_rgba(0,0,0,0.6),0_0_15px_rgba(146,104,62,0.18)]'
                     : 'bg-[#12110f] border-charcoal-border/50 hover:border-caramel/40'
                 }`}
               >
@@ -308,9 +308,9 @@ export default function ScopeSection() {
                 <button
                   type="button"
                   onClick={() => setActiveTabId(isSelected ? '' : s.id)}
-                  className="w-full text-left rtl:text-right p-4 sm:p-5 flex items-center justify-between group cursor-pointer"
+                  className="w-full text-left rtl:text-right p-4 flex items-center justify-between group cursor-pointer"
                 >
-                  <div className="flex items-center gap-3.5">
+                  <div className="flex items-center gap-3">
                     <span
                       className={`font-mono text-xs font-bold transition-colors duration-200 ${
                         isSelected ? 'text-sand' : 'text-stone-slate'
@@ -326,12 +326,12 @@ export default function ScopeSection() {
                       >
                         {s.title}
                       </h4>
-                      <p className="text-[10px] sm:text-[11px] text-stone-slate font-light mt-0.5">
+                      <p className="text-[10px] sm:text-[10.5px] text-stone-slate font-light mt-0.5">
                         {s.short}
                       </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2.5 shrink-0">
+                  <div className="flex items-center gap-2 shrink-0">
                     <IconComp
                       className={`w-4 h-4 transition-colors duration-200 ${
                         isSelected ? 'text-caramel' : 'text-stone-slate'
@@ -353,12 +353,12 @@ export default function ScopeSection() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: 'auto', opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.35, ease: [0.25, 0.1, 0.25, 1] }}
+                      transition={{ duration: 0.32, ease: [0.25, 0.1, 0.25, 1] }}
                       className="overflow-hidden"
                     >
-                      <div className="px-4 pb-5 pt-1 space-y-4 border-t border-caramel/30">
+                      <div className="px-4 pb-4 pt-1 space-y-3.5 border-t border-caramel/30">
                         {/* Image */}
-                        <div className="relative h-48 sm:h-56 w-full overflow-hidden border border-charcoal-border/60 rounded-xs mt-3">
+                        <div className="relative h-44 sm:h-52 w-full overflow-hidden border border-charcoal-border/60 rounded-xs mt-2.5">
                           <img
                             src={itemImage}
                             alt={s.title}
@@ -366,10 +366,10 @@ export default function ScopeSection() {
                             loading="eager"
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-transparent to-transparent pointer-events-none" />
-                          <div className="absolute top-3 start-3 px-2.5 py-1 bg-obsidian/95 text-[9px] font-mono text-sand border border-caramel/40 uppercase shadow-md">
+                          <div className="absolute top-2.5 start-2.5 px-2 py-0.5 bg-obsidian/95 text-[8.5px] font-mono text-sand border border-caramel/40 uppercase shadow-md">
                             {t.scope.spec_sheet}
                           </div>
-                          <div className="absolute bottom-2.5 end-2.5 px-2 py-0.5 bg-obsidian/90 text-[8px] font-mono uppercase tracking-wider text-stone-sand/90 border border-charcoal-border">
+                          <div className="absolute bottom-2 end-2 px-2 py-0.5 bg-obsidian/90 text-[8px] font-mono uppercase tracking-wider text-stone-sand/90 border border-charcoal-border">
                             {itemTag}
                           </div>
                         </div>
@@ -380,13 +380,13 @@ export default function ScopeSection() {
                         </p>
 
                         {/* Standards */}
-                        <div className="pt-3 border-t border-charcoal-border/60">
-                          <h5 className="text-[10px] sm:text-[11px] uppercase tracking-wider text-sand font-bold mb-2 font-mono">
+                        <div className="pt-2.5 border-t border-charcoal-border/60">
+                          <h5 className="text-[10px] uppercase tracking-wider text-sand font-bold mb-1.5 font-mono">
                             {t.scope.standards}
                           </h5>
-                          <div className="space-y-1.5">
+                          <div className="space-y-1">
                             {s.specs.map((spec, specIdx) => (
-                              <div key={specIdx} className="flex items-start gap-2 text-[11px] text-stone-sand">
+                              <div key={specIdx} className="flex items-start gap-2 text-[10.5px] text-stone-sand">
                                 <span className="w-1.5 h-1.5 bg-caramel rounded-full mt-1 shrink-0" />
                                 <span>{spec}</span>
                               </div>
@@ -395,13 +395,13 @@ export default function ScopeSection() {
                         </div>
 
                         {/* Action Link */}
-                        <div className="pt-3 border-t border-charcoal-border/40">
+                        <div className="pt-2.5 border-t border-charcoal-border/40">
                           <Link
                             href="#contact"
-                            className="w-full inline-flex items-center justify-center gap-2 py-2.5 px-4 bg-gradient-to-r from-obsidian via-[#1e1915] to-obsidian border border-caramel/50 text-cream text-[11px] uppercase tracking-wider font-semibold rounded-xs"
+                            className="w-full inline-flex items-center justify-center gap-2 py-2 px-3 bg-gradient-to-r from-obsidian via-[#1e1915] to-obsidian border border-caramel/50 text-cream text-[10.5px] uppercase tracking-wider font-semibold rounded-xs"
                           >
                             <span>{t.scope.rfp_btn}</span>
-                            <ArrowUpRight className={`w-3.5 h-3.5 text-sand ${isRtl ? 'rotate-[-90deg]' : ''}`} />
+                            <ArrowUpRight className={`w-3 h-3 text-sand ${isRtl ? 'rotate-[-90deg]' : ''}`} />
                           </Link>
                         </div>
                       </div>
